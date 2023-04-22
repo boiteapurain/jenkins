@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                rez env python-3.10 pyLib-3.10 jenkins_test -- python python/fire.py
+                rez env studio_launcher-houdini19.5 -- std_python"
                 '''
             }
         }
