@@ -3,7 +3,7 @@ pipeline {
         node {
             label 'grosquick'
             }
-      }
+    }
     triggers {
         pollSCM '*/5 * * * *'
     }
