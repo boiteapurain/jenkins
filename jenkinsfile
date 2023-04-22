@@ -12,16 +12,14 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo prout
+                echo prout dddd
                 '''
             }
         }
         stage('Test') {
             steps {
-                echo "Testing.."
-                sh '''
-                rez env studio_launcher-houdini19.5 -- std_python"
-                '''
+                echo "Testing..."
+                sh ''' rez env studio_launcher-houdini19.5 -- std_python '''
             }
         }
         stage('Deliver') {
