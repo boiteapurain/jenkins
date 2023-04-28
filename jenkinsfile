@@ -19,7 +19,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo "Testing..."
-                sh ''' rez env studio_launcher-houdini19.5 -- std_python '''
+                sh ''' rez env jenkins_test -- run_tests.sh '''
             }
         }
         stage('Deliver') {
