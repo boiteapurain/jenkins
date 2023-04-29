@@ -11,15 +11,10 @@
 
 from __future__ import print_function
 
-import glob
 import os
 import sys
-import tempfile
-import traceback
-from optparse import OptionParser
 
 # Let the user know which Python is picked up to run the tests.
-print()
 print(
     'Using Python version "%s" at "%s"'
     % (".".join(str(i) for i in sys.version_info[0:3]), sys.executable)
@@ -30,7 +25,6 @@ print(
 core_python_path = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "python")
 )
-print("")
 print("Adding tank location to python_path: %s" % core_python_path)
 sys.path = [core_python_path] + sys.path
 
