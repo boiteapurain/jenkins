@@ -19,7 +19,6 @@ import traceback
 from optparse import OptionParser
 
 # Let the user know which Python is picked up to run the tests.
-print()
 print(
     'Using Python version "%s" at "%s"'
     % (".".join(str(i) for i in sys.version_info[0:3]), sys.executable)
