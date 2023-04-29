@@ -1,4 +1,5 @@
-name: PRs to master
+name: dev to main
+
 on:
   pull_request:
     branches: [dev]
