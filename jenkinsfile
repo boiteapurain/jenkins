@@ -1,0 +1,31 @@
+pipeline {
+    agent {
+        node {
+            label 'grosquick'
+            }
+    }
+    triggers {
+        pollSCM '*/1 * * * *'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building.."
+                sh '''
+                echo prout dddd
+                '''
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Testing..."
+                sh ''' rez env jenkins_test -- run_tests.sh '''
+            }
+        }
+        stage('Deliver') {
+            steps {
+                echo 'Deliver super....'
+            }
+        }
+    }
+}
