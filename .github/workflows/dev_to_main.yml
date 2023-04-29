@@ -13,12 +13,10 @@ jobs:
 
 steps:
   - uses: actions/checkout@v2
-
   - name: Set Git config
     run: |
         git config --local user.emails "actions@github.com"
         git config --local user.name "Github Actions"
-
   - name: Merge dev to main
     run: |
         git fetch --unshallow
