@@ -6,3 +6,15 @@ repos:
         entry: black --check
         language: system
         types: [python]
+    # - id: flake8
+    #     name: flake8
+    #     entry: flake8
+    #     language: system
+    # - id: isort
+    #     name: isort
+    #     entry: isort
+    #     language: system
+    # - id: pydocstyles
+    #     name: pydocstyle
+    #     entry: pydocstyle
+    #     language: system
