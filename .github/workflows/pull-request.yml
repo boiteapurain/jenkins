@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - feature-1
+    - mrauto
 jobs:
   pull-request:
     runs-on: ubuntu-latest
@@ -11,3 +11,4 @@ jobs:
       uses: repo-sync/pull-request@v2
       with:
         destination_branch: "main"
+      permissions: write-all
