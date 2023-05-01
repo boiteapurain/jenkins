@@ -3,9 +3,9 @@ on:
     branches:
     - feature
 
-permissions:
-  contents: write
-  pull-requests: write
+# permissions:
+#   contents: write
+#   pull-requests: write
 
 jobs:
   pull-request:
@@ -17,4 +17,4 @@ jobs:
       with:
         destination_branch: "main"
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ secrets.SECRET_TOKEN }}
