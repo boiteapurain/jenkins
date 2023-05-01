@@ -13,4 +13,4 @@ jobs:
     steps: 
     - uses: phish108/autotag-action@1.1.53
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN}}
+        github-token: ${{secrets.GITHUB_TOKEN}}
