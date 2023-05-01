@@ -1,25 +1,21 @@
-name: Dev to main
+name: Update cms/master
 
 on:
-  pull_request:
-    branches: [dev]
-    # types: [closed]
+  push:
+    branches:
+      - main
 
 jobs:
-  merge-master-back-to-dev:
-    if: github.event.pull_request.merged == true
-    # timeout-minutes: 2
+  update-cms-master:
+    name: Merge master into release after a PR is merged
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set Git config
-        run: |
-            git config --local user.emails "actions@github.com"
-            git config --local user.name "Github Actions"
-      - name: Merge dev to main
-        run: |
-            git fetch --unshallow
-            git checkout main
-            git pull
-            git merge --no-ff dev -m "Auto-merge dev to main"
-            git push
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: merge
+        uses: mtanzi/action-automerge@v1
+        id: merge
+        with:
+          github_token: ${{ github.token }}
+          source: 'main'
+          target: 'release'
