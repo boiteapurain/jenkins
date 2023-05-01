@@ -1,4 +1,4 @@
 # jenkins
 
 SAlit
-msdghkmghsfmlghsml
+auto merge
